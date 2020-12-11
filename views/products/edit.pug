@@ -1,0 +1,20 @@
+extends ../layout
+
+
+block content
+    h1 Edit Course
+    form(action="/products/edit/"+course._id, method="post")
+        div(class="form-group")
+            lable(for="CourseName") Course Name
+            input(type="text" ,class="form-control" ,id="CourseName" ,name="CourseName" ,value= course.CourseName)
+        div(class="form-group")
+            lable(for="CourseID") Course ID
+            input(type="text" ,class="form-control" ,id="CourseID" ,name="CourseID" ,value= course.CourseID)
+        div(class="form-group")
+            lable(for="CourseDuration") Course Duration
+            input(type="text" ,class="form-control" ,id="CourseDuration" ,name="CourseDuration" ,value= course.CourseDuration)
+        div(class="form-group")
+            lable(for="CourseFee") Course Fee
+            input(type="text" ,class="form-control" ,id="CourseFee" ,name="CourseFee" ,value= course.CourseFee)
+        input(type="submit" ,class="btn btn-primary")
+    
